@@ -5,6 +5,18 @@ class PatientsController < ApplicationController
     @patients = Patient.all
   end
 
+  def show
+  end
+
+  def create
+    @patient = Patient.new(patient_params)
+    if @patient.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
+  end
+
   private
 
   def patient_params
