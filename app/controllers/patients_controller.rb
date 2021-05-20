@@ -17,6 +17,11 @@ class PatientsController < ApplicationController
     end
   end
 
+  def destroy
+    @patient.destroy
+    redirect_to patients_path
+  end
+
   private
 
   def patient_params
