@@ -1,5 +1,5 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [:show, :edit, :destroy]
+  before_action :set_doctor, only: [:show, :edit, :update, :destroy]
 
   def index
     @doctors = Doctor.all
@@ -22,6 +22,14 @@ class DoctorsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @doctor.update(doctor_params)
+      redirect_to doctors_path
+    else
+      render :new
+    end
   end
 
   def destroy
