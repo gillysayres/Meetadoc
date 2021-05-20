@@ -3,5 +3,7 @@
   <% @doctors.each do |doc| %>
     <li> <%= doc.id %> - <%= doc.name %></li>
     <li> <%= doc.crm %> - <%= doc.crm_uf %></li>
+    <%= link_to "Edit", edit_doctor_path(doc.id) %>
+    <%= link_to "Destroy", destroy_path(doc.id), method: :delete %>
   <% end %>
 </ul>
