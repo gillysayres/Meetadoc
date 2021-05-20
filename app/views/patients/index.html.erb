@@ -1,9 +1,21 @@
-<h1>Patients</h1>
-<ul>
-  <% @patients.each do |patient| %>
-    <li> <%= patient.id %> - <%= patient.name %></li>
-    <li> <%= patient.cpf %> - <%= patient.birth_date %></li>
-    <%= link_to "Edit", edit_patient_path(patient.id) %>
-    <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete %>
-  <% end %>
-</ul>
+<div class="container">
+  <h1 class='doc-title'>Patients</h1>
+    <div class="doctor-grid">
+      <ul>
+        <% @patients.each do |patient| %>
+          <div class="doctor-card">
+            <div class="doctor-content">
+              <div class="doctor-info">
+                <li> <%= patient.id %> - <%= patient.name %></li>
+                <li> <%= patient.cpf %> - <%= patient.birth_date %></li>
+              </div>
+              <div class="btn-doctors">
+                <%= link_to "Edit", edit_patient_path(patient.id), class: 'btn btn-custom btn-edit' %>
+                <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete, class: 'btn btn-custom btn-delete' %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </ul>
+  </div>
+</div>
