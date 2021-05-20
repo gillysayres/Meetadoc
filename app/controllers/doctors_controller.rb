@@ -1,8 +1,12 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [:edit, :destroy]
+  before_action :set_doctor, only: [:show, :edit, :destroy]
 
   def index
     @doctors = Doctor.all
+  end
+
+  def show
+
   end
 
   def create
@@ -19,6 +23,7 @@ class DoctorsController < ApplicationController
 
   def destroy
     @doctor.destroy
+    redirect_to doctors_path
   end
 
   private
