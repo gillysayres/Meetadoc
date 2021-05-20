@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   delete "doctors/:id", to: "doctors#destroy", as: :destroy
 
   resources :patients, except: [:destroy]
-  delete "patients/:id", to: "patients#destroy", as: :destroy
+  delete "patients/:id", to: "patients#destroy", as: :destroy_patient
 end
