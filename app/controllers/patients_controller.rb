@@ -8,6 +8,10 @@ class PatientsController < ApplicationController
   def show
   end
 
+  def new
+    @patient = Patient.new
+  end
+
   def create
     @patient = Patient.new(patient_params)
     if @patient.save
