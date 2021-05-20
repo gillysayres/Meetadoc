@@ -6,13 +6,16 @@ class DoctorsController < ApplicationController
   end
 
   def show
+  end
 
+  def new
+    @doctor = Doctor.new
   end
 
   def create
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
-      redirect_to root_path
+      redirect_to doctors_path
     else
       render 'new'
     end
