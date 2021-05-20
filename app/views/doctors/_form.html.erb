@@ -1,6 +1,6 @@
 <%= simple_form_for(doctor) do |d| %>
   <%= d.input :name %>
-  <%= d.input :crm %>
-  <%= d.input :crm_uf %>
-  <%= d.submit class: 'btn-submit mt-3' %>
+  <%= d.input :crm, label: 'CRM' %>
+  <%= d.input :crm_uf, label: 'CRM UF' %>
+  <%= d.submit class: 'btn btn-update btn-custom mt-3' %>
 <% end %>
