@@ -1,0 +1,7 @@
+<h1>Doctors</h1>
+<ul>
+  <% @doctors.each do |doc| %>
+    <li> <%= doc.id %> - <%= doc.name %></li>
+    <li> <%= doc.crm %> - <%= doc.crm_uf %></li>
+  <% end %>
+</ul>
