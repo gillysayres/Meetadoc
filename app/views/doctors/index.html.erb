@@ -1,9 +1,21 @@
-<h1>Doctors</h1>
-<ul>
-  <% @doctors.each do |doc| %>
-    <li> <%= doc.id %> - <%= doc.name %></li>
-    <li> <%= doc.crm %> - <%= doc.crm_uf %></li>
-    <%= link_to "Edit", edit_doctor_path(doc.id) %>
-    <%= link_to "Destroy", destroy_path(doc.id), method: :delete %>
-  <% end %>
-</ul>
+<div class="container">
+  <h1 class='doc-title'>Doctors</h1>
+    <div class="doctor-grid">
+      <ul>
+        <% @doctors.each do |doc| %>
+          <div class="doctor-card">
+            <div class="doctor-content">
+              <div class="doctor-info">
+                <li> <%= doc.id %> - <%= doc.name %></li>
+                <li> <%= doc.crm %> - <%= doc.crm_uf %></li>
+              </div>
+              <div class="btn-doctors">
+                <%= link_to "Edit", edit_doctor_path(doc.id), class: 'btn btn-custom btn-edit' %>
+                <%= link_to "Destroy", destroy_path(doc.id), method: :delete, class: 'btn btn-custom btn-delete' %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </ul>
+  </div>
+</div>
