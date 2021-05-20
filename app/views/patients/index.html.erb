@@ -1,0 +1,9 @@
+<h1>Patients</h1>
+<ul>
+  <% @patients.each do |patient| %>
+    <li> <%= patient.id %> - <%= patient.name %></li>
+    <li> <%= patient.crm %> - <%= patient.crm_uf %></li>
+    <%= link_to "Edit", edit_patient_path(patient.id) %>
+    <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete %>
+  <% end %>
+</ul>
