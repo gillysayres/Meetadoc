@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :patients, except: [:destroy]
   delete "patients/:id", to: "patients#destroy", as: :destroy_patient
 
+  resources :appointments, except: [:destroy]
+  delete "appointments/:id", to: "appointments#destroy", as: :destroy_appointment
 end

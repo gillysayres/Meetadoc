@@ -1,0 +1,7 @@
+<%= simple_form_for(appointment) do |a| %>
+  <%= a.input :patient_id %>
+  <%= a.input :doctor_id %>
+  <%= a.input :starts_at %>
+  <%= a.input :ends_at %>
+  <%= a.submit class: 'btn-submit mt-3' %>
+<% end %>
