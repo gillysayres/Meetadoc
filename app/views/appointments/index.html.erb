@@ -1,7 +1,7 @@
 <h1>Appointments</h1>
 <ul>
   <% @appointments.each do |a| %>
-    <li> <%= a.starts_at %> - <%= a.ends_at %></li>
+    <li> <%= a.starts_at.to_s(:custom_datetime)%> - <%= a.ends_at.to_s(:custom_datetime) %></li>
     <li> <%= a.patient_id %> - <%= a.doctor_id %></li>
     <li> <%= a.id %></li>
     <%= link_to "Edit", edit_appointment_path(a.id) %>
