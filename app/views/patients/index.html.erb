@@ -12,7 +12,7 @@
                   </div>
                   <div class="btn-doctors">
                   <%= link_to "Edit", edit_patient_path(patient.id), class: 'btn btn-custom btn-edit' %>
-                  <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete, class: 'btn btn-custom btn-delete' %>
+                  <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-custom btn-delete' %>
               </div>
             </div>
           </div>

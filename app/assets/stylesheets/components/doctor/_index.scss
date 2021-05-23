@@ -10,20 +10,42 @@
 .doctor-content {
   display: flex;
   justify-content: space-between;
-  .btn-custom {
-    font-weight: bold;
-    color: #fff;
-  }
   .btn-edit {
     background-color: #4aa96c;
   }
   .btn-delete {
     background-color: #f55c47;
   }
-}5
+}
+.btn-custom {
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-doctors {
+
+}
 
 .doctor-info {
   li {
     list-style-type: none;
+  }
+}
+
+.btn-update {
+  width: 25%;
+  background-color: #4aa96c;
+  margin-left: 75%;
+}
+
+.form-size {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 800px){
+  .btn-update {
+    width: 100%;
+    margin-left: 0;
   }
 }
