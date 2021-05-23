@@ -2,16 +2,17 @@
   <h1 class='doc-title'>Patients</h1>
     <div class="doctor-grid">
       <ul>
-        <% @patients.each do |patient| %>
-          <div class="doctor-card">
-            <div class="doctor-content">
-              <div class="doctor-info">
-                <li> <%= patient.id %> - <%= patient.name %></li>
-                <li> <%= patient.cpf %> - <%= patient.birth_date %></li>
-              </div>
-              <div class="btn-doctors">
-                <%= link_to "Edit", edit_patient_path(patient.id), class: 'btn btn-custom btn-edit' %>
-                <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-custom btn-delete' %>
+          <%= link_to "New", new_patient_path, class: 'btn btn-secondary mb-2 btn-custom' %>
+            <% @patients.each do |patient| %>
+              <div class="doctor-card">
+                <div class="doctor-content">
+                  <div class="doctor-info">
+                  <li> <%= patient.id %> - <%= patient.name %></li>
+                  <li> <%= patient.cpf %> - <%= patient.birth_date %></li>
+                  </div>
+                  <div class="btn-doctors">
+                  <%= link_to "Edit", edit_patient_path(patient.id), class: 'btn btn-custom btn-edit' %>
+                  <%= link_to "Destroy", destroy_patient_path(patient.id), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-custom btn-delete' %>
               </div>
             </div>
           </div>

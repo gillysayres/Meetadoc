@@ -2,6 +2,7 @@
   <h1 class='doc-title'>Doctors</h1>
     <div class="doctor-grid">
       <ul>
+  <%= link_to "New", new_doctor_path, class: 'btn btn-secondary mb-2 btn-custom' %>
         <% @doctors.each do |doc| %>
           <div class="doctor-card">
             <div class="doctor-content">
