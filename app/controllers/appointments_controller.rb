@@ -33,7 +33,11 @@ class AppointmentsController < ApplicationController
   end
 
   def destroy
-    @appointment.destroy
+    if @appointment.destroy
+      # flash[:notice] = 'Doctor erased!'
+    else
+      flash[:notice] = 'You cannot erase a doctor with an appointment!'
+    end
     redirect_to appointments_path
   end
 
