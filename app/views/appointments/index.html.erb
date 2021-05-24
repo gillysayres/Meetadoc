@@ -8,7 +8,7 @@
             <div class="doctor-content">
               <div class="doctor-info">
                 <li> <%= a.starts_at.to_s(:custom_datetime)%> - <%= a.ends_at.to_s(:custom_datetime) %></li>
-                <li> <%= a.patient_id %> - <%= a.doctor_id %></li>
+                <li> <%= a.patient.name %> - <%= a.doctor.name %></li>
                 <li> <%= a.id %></li>
               </div>
               <div class="btn-doctors">
