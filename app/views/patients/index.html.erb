@@ -7,8 +7,10 @@
               <div class="doctor-card">
                 <div class="doctor-content">
                   <div class="doctor-info">
-                  <li> <%= patient.id %> - <%= patient.name %></li>
-                  <li> <%= patient.cpf %> - <%= patient.birth_date %></li>
+                  <li> Patient ID: <%= patient.id %></li>
+                  <li> Name: <%= patient.name %></li>
+                  <li> CPF: <%= patient.cpf %></li>
+                  <li> Birthday: <%= patient.birth_date %></li>
                   </div>
                   <div class="btn-doctors">
                   <%= link_to "Edit", edit_patient_path(patient.id), class: 'btn btn-custom btn-edit' %>
