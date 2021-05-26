@@ -7,8 +7,9 @@
           <div class="doctor-card">
             <div class="doctor-content">
               <div class="doctor-info">
-                <li> <%= doc.id %> - <%= doc.name %></li>
-                <li> <%= doc.crm %> - <%= doc.crm_uf %></li>
+                <li> ID: <%= doc.id %></li>
+                <li> Name: <%= doc.name %></li>
+                <li class="crm-info"> CRM: <%= doc.crm %> - <%= doc.crm_uf %></li>
               </div>
               <div class="btn-doctors">
                 <%= link_to "Edit", edit_doctor_path(doc.id), class: 'btn btn-custom btn-edit' %>
