@@ -1,7 +1,26 @@
-<h1>Appointments done: <%= @appointments %></h1>
-<h1><%= @appointments2 %></h1>
-<h1><%= @appointment_by_doctor %></h1>
+<div class="container">
+  <div class="dash-container">
+   <div class="dashboard">
+     <h2 class="p-3"><%= @appointments %></h2>
+     <div class="p-3 dash-text">
+      <p class="text-center">Appointments Done</p>
+     </div>
+   </div>
+  <div class="dashboard">
+     <h2 class="p-3"><%= @unique_patients %></h2>
+     <div class="p-3 dash-text">
+      <p class="text-center"> Patients Treated</p>
+     </div>
+   </div>
+     <div class="dashboard">
+     <h2 class="p-3"><%= @appointments_all %></h2>
+     <div class="p-3 dash-text">
+      <p class="text-center"> Total Appointments</p>
+     </div>
+   </div>
+</div>
 
+<h1><%= @appointment_by_doctor %></h1>
 
 <div class="container">
 <select class="form-select" aria-label="Default select example">
