@@ -15,7 +15,7 @@
               </div>
               <div class="btn-doctors">
                 <%= link_to "Edit", edit_appointment_path(a.id), class: 'btn btn-custom btn-edit' %>
-                <%= link_to "Destroy", destroy_appointment_path(a.id), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-custom btn-delete' %>
+                <%= link_to "Delete", destroy_appointment_path(a.id), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-custom btn-delete' %>
               </div>
             </div>
           </div>
