@@ -15,6 +15,7 @@
   }
   .btn-delete {
     background-color: #f55c47;
+    margin-left: 5px;
   }
 }
 .btn-custom {
@@ -23,7 +24,9 @@
 }
 
 .btn-doctors {
-
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
 }
 
 .doctor-info {
@@ -48,4 +51,8 @@
     width: 100%;
     margin-left: 0;
   }
+}
+
+.crm-info {
+  opacity: 0.6;
 }
