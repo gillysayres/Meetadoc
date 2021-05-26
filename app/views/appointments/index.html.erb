@@ -1,15 +1,17 @@
-
 <div class="container">
   <h1 class='doc-title'>Appointments</h1>
     <div class="doctor-grid">
       <ul>
+        <%= link_to "New", new_patient_path, class: 'btn btn-secondary mb-2 btn-custom' %>
         <% @appointments.each do |a| %>
           <div class="doctor-card">
             <div class="doctor-content">
               <div class="doctor-info">
-                <li> <%= a.starts_at.to_s(:custom_datetime)%> - <%= a.ends_at.to_s(:custom_datetime) %></li>
-                <li> <%= a.patient_id %> - <%= a.doctor_id %></li>
-                <li> <%= a.id %></li>
+                <li>
+                <li> Doctor: <%= a.doctor.name %></li>
+                <li> Patient: <%= a.patient.name %></li>
+                <li> Starts at: <%= a.starts_at.to_s(:custom_datetime)%></li>
+                <li> Ends at: <%= a.ends_at.to_s(:custom_datetime) %></li>
               </div>
               <div class="btn-doctors">
                 <%= link_to "Edit", edit_appointment_path(a.id), class: 'btn btn-custom btn-edit' %>

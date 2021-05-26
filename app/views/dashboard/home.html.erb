@@ -1,0 +1,22 @@
+<h1>Appointments done: <%= @appointments %></h1>
+<h1><%= @appointments2 %></h1>
+<h1><%= @appointment_by_doctor %></h1>
+
+
+<div class="container">
+<select class="form-select" aria-label="Default select example">
+  <option selected>Todos</option>
+  <%  @doctors.each do |d| %>
+    <option value="<% d.id %>"><%= d.name %></option>
+    <h1>1</h1>
+
+  <% end %>
+</select>
+
+</div>
+<!-- 8:Criar uma tela para listar os seguintes dados, filtrados por médico,
+com a opção de visualizar de todos os médicos, sendo essa a visão padrão.
+8.1: Deve ser possível filtrar por médico
+8.2: O filtro padrão deve ser “Todos os médicos"
+8.3: Mostrar a quantidade de consultas que já foram realizadas
+8.4: Mostrar a quantidade de pacientes diferentes atendidos no período -->
