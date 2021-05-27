@@ -3,6 +3,7 @@ Doctor.destroy_all
 Patient.destroy_all
 Appointment.destroy_all
 
+
 puts 'Creating doctors...'
 Doctor.create!(
   name: 'John',
