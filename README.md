@@ -83,4 +83,9 @@ After downloading this project, run `rails db:create db:migrate db:seed`, then`r
    - Added Incomplete dashboard
    - Change destroy to delete
 
+   **Missing in this project**
+
+   - Conclusion of the dashboard
+   - Validations for appointments
+   - System tests
 
