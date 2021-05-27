@@ -10,8 +10,3 @@ class DashboardController < ApplicationController
     # @appointment = Appointment.select(:id).where("ends_at <= ?", DateTime.now)
   end
 end
-
-    # SELECT COUNT (ID) FROM appointments, where ends_at < DateTime.now AND id = ?
-    # SELECT COUNT (ID) FROM appointments, where ends_at < DateTime.now, GROUP_BY ends_at
-    # SELECT COUNT (patient_id) FROM appointments, where ends_at < DateTime.now, GROUP_BY patient_id
-    # SELECT DISTINCT
