@@ -16,7 +16,7 @@ Tests were implemented using the Rspec gem
 
 ## How to run this project?
 After downloading this project, run `bundle install`. `yarn install`, `rails db:create db:migrate db:seed`, then`rails s` to start the server.
- - The server will be running on `localhost:3000`
+ - The server will be running on `localhost:3000`.
  - After entering you will need to create a user and then you are set to use the app
 
 ## Development routine
